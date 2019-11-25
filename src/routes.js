@@ -6,7 +6,7 @@ const todos = require('./controllers/todos.js')
 const auth = require('./middleware/auth')
 
 router.get('/users', auth, users.getUser)
-router.post('/login', users.login)
+router.post('/users/login', users.login)
 router.post('/logout', auth, users.logout)
 router.post('/users', users.createUser)  // signup
 router.patch('/users', auth, users.updateUser)
